@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  match 'users', to: 'complains#create', via: [:options]
+  match 'users', to: 'complains#index', via: [:options]
+  match 'users', to: 'complains#show', via: [:options]
+
+
+
   resources :complains
 
   root 'complains#index'
